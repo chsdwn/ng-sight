@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from 'src/routes';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -7,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionHealthComponent } from './sections/section-health/section-health.component';
 import { SectionOrdersComponent } from './sections/section-orders/section-orders.component';
 import { SectionSalesComponent } from './sections/section-sales/section-sales.component';
+
 
 @NgModule({
    declarations: [
@@ -18,7 +21,8 @@ import { SectionSalesComponent } from './sections/section-sales/section-sales.co
       SectionSalesComponent
    ],
    imports: [
-      BrowserModule
+      BrowserModule,
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [],
    bootstrap: [
